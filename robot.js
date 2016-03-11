@@ -22,14 +22,14 @@
         xmlHttp.send(null);
     }
 
-    ext.step_forward = function(duration) {
+    ext.move_forward = function(duration) {
         httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"move_backward");
         setTimeout(function() {
             httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"stop");
         }, duration*1000);
     };
 
-    ext.step_backward = function(duration) {
+    ext.move_backward = function(duration) {
         httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"move_forward");
         setTimeout(function() {
             httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"stop");
