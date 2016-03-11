@@ -37,14 +37,14 @@
     };
 
     ext.turn_right = function() {
-        httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"turn_left");
+        httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"turn_right");
         setTimeout(function() {
             httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"stop");
         }, STEP_DURATION);
     };
 
     ext.turn_left = function() {
-        httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"turn_right");
+        httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"turn_left");
         setTimeout(function() {
             httpGetAsync("http://192.168.0.1:8080/?action=command&command="+"stop");
         }, STEP_DURATION);
