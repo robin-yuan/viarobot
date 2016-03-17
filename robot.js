@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global $, ScratchExtensions */
+/*global $, ScratchExtensions, setTimeout */
 "use strict";
 (function (ext) {
     // Default step duration: 0.5s
@@ -39,10 +39,12 @@
         };
 
     ext.move_forward = function (duration, callback) {
+        // Robot API quirk: "forward" is actually "backward" at the moment
         sendMove("move_backward", duration, callback);
     };
 
     ext.move_backward = function (duration, callback) {
+        // Robot API quirk: "backward" is actually "forward" at the moment
         sendMove("move_forward", duration, callback);
     };
 
