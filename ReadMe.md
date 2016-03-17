@@ -4,6 +4,8 @@ Robot control [Scratch extension](http://scratchx.org/) for an experimental rove
 
 Use it by either loading the extension by the URL: `http://imrehg.github.io/viarobot/robot.js`, or directly attaching it to the Scratch experimental interface URL as [http://scratchx.org/?url=http://imrehg.github.io/viarobot/robot.js](http://scratchx.org/?url=http://imrehg.github.io/viarobot/robot.js).
 
+An example control script is available at `robot_control.sbx` in the repository.
+
 ## Functionality
 
  * [x] Movement control
