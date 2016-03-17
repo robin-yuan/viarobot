@@ -18,11 +18,12 @@
             xmlHttp.send(null);
         },
 
-        sendMove = function (command, duration) {
+        sendMove = function (command, duration, callback) {
             httpGetAsync(API_BASE_URL + command);
-            if (duration) {
+            if (duration && duration > 0) {
                 setTimeout(function () {
                     httpGetAsync(API_BASE_URL + "stop");
+                    callback();
                 }, duration * 1000);
             }
         },
@@ -37,20 +38,20 @@
             ]
         };
 
-    ext.move_forward = function (duration) {
-        sendMove("move_backward", duration);
+    ext.move_forward = function (duration, callback) {
+        sendMove("move_backward", duration, callback);
     };
 
-    ext.move_backward = function (duration) {
-        sendMove("move_forward", duration);
+    ext.move_backward = function (duration, callback) {
+        sendMove("move_forward", duration, callback);
     };
 
-    ext.turn_right = function (duration) {
-        sendMove("turn_right", duration);
+    ext.turn_right = function (duration, callback) {
+        sendMove("turn_right", duration, callback);
     };
 
-    ext.turn_left = function (duration) {
-        sendMove("turn_left", duration);
+    ext.turn_left = function (duration, callback) {
+        sendMove("turn_left", duration, callback);
     };
 
     // Cleanup function when the extension is unloaded
