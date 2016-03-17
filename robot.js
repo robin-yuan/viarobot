@@ -30,10 +30,10 @@
         // Block and block menu descriptions
         descriptor = {
             blocks: [
-                [' ', 'move forward for %n seconds', 'move_forward', STEP_DURATION],
-                [' ', 'move backward for %n seconds', 'move_backward', STEP_DURATION],
-                [' ', 'turn left for %n seconds', 'turn_left', STEP_DURATION],
-                [' ', 'turn right for %n seconds', 'turn_right', STEP_DURATION]
+                ['w', 'move forward for %n seconds', 'move_forward', STEP_DURATION],
+                ['w', 'move backward for %n seconds', 'move_backward', STEP_DURATION],
+                ['w', 'turn left for %n seconds', 'turn_left', STEP_DURATION],
+                ['w', 'turn right for %n seconds', 'turn_right', STEP_DURATION]
             ]
         };
 
